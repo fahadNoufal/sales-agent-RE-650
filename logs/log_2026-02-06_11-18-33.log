@@ -1,0 +1,5 @@
+[2026-02-06 11:18:33,309] 14 root - INFO - Configuration loaded successfully.
+[2026-02-06 11:18:44,494] 54 datasets - INFO - PyTorch version 2.8.0 available.
+[2026-02-06 11:18:46,967] 219 sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+[2026-02-06 11:18:46,967] 227 sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2026-02-06 11:18:53,771] 22 chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.

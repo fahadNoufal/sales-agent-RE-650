@@ -1,0 +1,74 @@
+[2026-02-06 11:37:40,516] 14 root - INFO - Configuration loaded successfully.
+[2026-02-06 11:37:50,291] 54 datasets - INFO - PyTorch version 2.8.0 available.
+[2026-02-06 11:37:52,327] 24 root - INFO - Initializing Embedding Manager with model: all-MiniLM-L6-v2
+[2026-02-06 11:37:52,329] 219 sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+[2026-02-06 11:37:52,329] 227 sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2026-02-06 11:37:59,213] 148 root - INFO - Initializing vector database...
+[2026-02-06 11:37:59,242] 22 chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2026-02-06 11:37:59,460] 78 root - INFO - Loading shipping_policy.txt...
+[2026-02-06 11:37:59,460] 94 root - INFO - Chunking the shipping_policy.txt file content...
+[2026-02-06 11:37:59,461] 78 root - INFO - Loading cancellation_policy.txt...
+[2026-02-06 11:37:59,461] 94 root - INFO - Chunking the cancellation_policy.txt file content...
+[2026-02-06 11:37:59,461] 78 root - INFO - Loading product_details.txt...
+[2026-02-06 11:37:59,461] 94 root - INFO - Chunking the product_details.txt file content...
+[2026-02-06 11:37:59,462] 78 root - INFO - Loading refund_policy.txt...
+[2026-02-06 11:37:59,462] 94 root - INFO - Chunking the refund_policy.txt file content...
+[2026-02-06 11:37:59,462] 143 root - INFO - Processed 4 files into 25 high-quality chunks.
+[2026-02-06 11:38:00,630] 162 root - INFO - Adding 25 documents to the vector database...
+[2026-02-06 11:38:00,689] 15 root - INFO - Building the state graph for the RAG system.
+[2026-02-06 11:38:00,690] 167 root - INFO - Creating node for replying to user enquiries using RAG retriever.
+[2026-02-06 11:38:15,128] 17 root - INFO - Classifying user enquiry type based on chat history.
+[2026-02-06 11:38:15,129] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:38:16,285] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:38:16,289] 17 root - INFO - Routing based on intent: greeting
+[2026-02-06 11:38:16,291] 52 root - INFO - Generating reply to casual greeting.
+[2026-02-06 11:38:16,292] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:38:17,597] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:38:41,202] 17 root - INFO - Classifying user enquiry type based on chat history.
+[2026-02-06 11:38:41,203] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:38:42,110] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:38:42,114] 17 root - INFO - Routing based on intent: inquiry
+[2026-02-06 11:38:42,115] 11 root - INFO - Received retrieval query: 'human: whats the on road price' with top_k=5 and threshold=0.7
+[2026-02-06 11:38:42,159] 36 root - INFO - No documents met the similarity threshold.
+[2026-02-06 11:38:42,161] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:38:44,953] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:39:00,042] 17 root - INFO - Classifying user enquiry type based on chat history.
+[2026-02-06 11:39:00,044] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:39:01,135] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:39:01,137] 17 root - INFO - Routing based on intent: inquiry
+[2026-02-06 11:39:01,137] 11 root - INFO - Received retrieval query: 'human: what about the ex showroom price' with top_k=5 and threshold=0.7
+[2026-02-06 11:39:01,159] 36 root - INFO - No documents met the similarity threshold.
+[2026-02-06 11:39:01,160] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:39:02,774] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:39:40,566] 17 root - INFO - Classifying user enquiry type based on chat history.
+[2026-02-06 11:39:40,568] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:39:41,686] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:39:41,689] 17 root - INFO - Routing based on intent: inquiry
+[2026-02-06 11:39:41,690] 11 root - INFO - Received retrieval query: 'human: is there any details about thhe price' with top_k=5 and threshold=0.7
+[2026-02-06 11:39:41,723] 36 root - INFO - No documents met the similarity threshold.
+[2026-02-06 11:39:41,724] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:39:43,119] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:40:02,026] 17 root - INFO - Classifying user enquiry type based on chat history.
+[2026-02-06 11:40:02,027] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:40:03,191] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:40:03,193] 17 root - INFO - Routing based on intent: inquiry
+[2026-02-06 11:40:03,194] 11 root - INFO - Received retrieval query: 'human: tell me about the pricing & availablility' with top_k=5 and threshold=0.7
+[2026-02-06 11:40:03,231] 36 root - INFO - No documents met the similarity threshold.
+[2026-02-06 11:40:03,232] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:40:04,828] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:40:16,766] 17 root - INFO - Classifying user enquiry type based on chat history.
+[2026-02-06 11:40:16,767] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:40:17,935] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:40:17,938] 17 root - INFO - Routing based on intent: inquiry
+[2026-02-06 11:40:17,939] 11 root - INFO - Received retrieval query: 'human: tell me about the design' with top_k=5 and threshold=0.7
+[2026-02-06 11:40:17,979] 36 root - INFO - No documents met the similarity threshold.
+[2026-02-06 11:40:17,980] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:40:19,369] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:40:32,119] 17 root - INFO - Classifying user enquiry type based on chat history.
+[2026-02-06 11:40:32,120] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:40:33,296] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:40:33,299] 17 root - INFO - Routing based on intent: inquiry
+[2026-02-06 11:40:33,300] 11 root - INFO - Received retrieval query: 'human: is there any refund policies' with top_k=5 and threshold=0.7
+[2026-02-06 11:40:33,332] 36 root - INFO - No documents met the similarity threshold.
+[2026-02-06 11:40:33,334] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:40:34,730] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"

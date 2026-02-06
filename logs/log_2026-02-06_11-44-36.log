@@ -1,0 +1,58 @@
+[2026-02-06 11:44:36,024] 14 root - INFO - Configuration loaded successfully.
+[2026-02-06 11:44:45,439] 54 datasets - INFO - PyTorch version 2.8.0 available.
+[2026-02-06 11:44:47,835] 24 root - INFO - Initializing Embedding Manager with model: all-MiniLM-L6-v2
+[2026-02-06 11:44:47,838] 219 sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+[2026-02-06 11:44:47,838] 227 sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+[2026-02-06 11:45:01,330] 148 root - INFO - Initializing vector database...
+[2026-02-06 11:45:01,356] 22 chromadb.telemetry.product.posthog - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[2026-02-06 11:45:01,804] 78 root - INFO - Loading shipping_policy.txt...
+[2026-02-06 11:45:01,805] 94 root - INFO - Chunking the shipping_policy.txt file content...
+[2026-02-06 11:45:01,806] 78 root - INFO - Loading cancellation_policy.txt...
+[2026-02-06 11:45:01,806] 94 root - INFO - Chunking the cancellation_policy.txt file content...
+[2026-02-06 11:45:01,807] 78 root - INFO - Loading product_details.txt...
+[2026-02-06 11:45:01,807] 94 root - INFO - Chunking the product_details.txt file content...
+[2026-02-06 11:45:01,808] 78 root - INFO - Loading refund_policy.txt...
+[2026-02-06 11:45:01,808] 94 root - INFO - Chunking the refund_policy.txt file content...
+[2026-02-06 11:45:01,808] 143 root - INFO - Processed 4 files into 25 high-quality chunks.
+[2026-02-06 11:45:03,023] 162 root - INFO - Adding 25 documents to the vector database...
+[2026-02-06 11:45:03,072] 15 root - INFO - Building the state graph for the RAG system.
+[2026-02-06 11:45:03,073] 167 root - INFO - Creating node for replying to user enquiries using RAG retriever.
+[2026-02-06 11:45:07,667] 17 root - INFO - Classifying user enquiry type based on chat history.
+[2026-02-06 11:45:07,669] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:45:08,953] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:45:08,957] 17 root - INFO - Routing based on intent: greeting
+[2026-02-06 11:45:08,958] 52 root - INFO - Generating reply to casual greeting.
+[2026-02-06 11:45:08,960] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:45:10,591] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:45:20,908] 17 root - INFO - Classifying user enquiry type based on chat history.
+[2026-02-06 11:45:20,909] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:45:22,469] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:45:22,472] 17 root - INFO - Routing based on intent: inquiry
+[2026-02-06 11:45:22,474] 11 root - INFO - Received retrieval query: 'human: whats its onroad price' with top_k=5.
+[2026-02-06 11:45:22,529] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:45:24,517] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:45:44,235] 17 root - INFO - Classifying user enquiry type based on chat history.
+[2026-02-06 11:45:44,237] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:45:45,816] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:45:45,818] 17 root - INFO - Routing based on intent: inquiry
+[2026-02-06 11:45:45,820] 11 root - INFO - Received retrieval query: 'human: whats its wheel size' with top_k=5.
+[2026-02-06 11:45:45,843] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:45:47,659] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:46:17,494] 17 root - INFO - Classifying user enquiry type based on chat history.
+[2026-02-06 11:46:17,495] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:46:18,584] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:46:18,587] 17 root - INFO - Routing based on intent: inquiry
+[2026-02-06 11:46:18,588] 11 root - INFO - Received retrieval query: 'human: does it supports e20 petrol' with top_k=5.
+[2026-02-06 11:46:18,614] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:46:20,017] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:48:28,555] 17 root - INFO - Classifying user enquiry type based on chat history.
+[2026-02-06 11:48:28,556] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:48:29,671] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:48:29,674] 17 root - INFO - Routing based on intent: lead
+[2026-02-06 11:48:29,675] 52 root - INFO - Generating reply to casual greeting.
+[2026-02-06 11:48:29,676] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:48:31,087] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:48:41,613] 17 root - INFO - Classifying user enquiry type based on chat history.
+[2026-02-06 11:48:41,615] 5207 google_genai.models - INFO - AFC is enabled with max remote calls: 10.
+[2026-02-06 11:48:42,612] 1025 httpx - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+[2026-02-06 11:48:42,614] 17 root - INFO - Routing based on intent: extract
